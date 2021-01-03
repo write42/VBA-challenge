@@ -5,6 +5,7 @@ Header = False
 For Each ws In Worksheets
     LastRow = ws.Cells(Rows.Count, "A").End(xlUp).Row
     Dim Ticker As String
+    Ticker=" "
     Dim Dates As String
     Dim Open_price As Double
     Open_price = 0
@@ -18,10 +19,10 @@ For Each ws In Worksheets
     Ticker_Volume = 0
     Dim Summary_Table_Row As Integer
     Summary_Table_Row = 2
-    Range("I1").Value = "Ticker"
-    Range("J1").Value = "Yearly Change"
-    Range("K1").Value = "Percent Change"
-    Range("L1").Value = "Total Stock Volume"
+    ws.Range("I1").Value = "Ticker"
+    ws.Range("J1").Value = "Yearly Change"
+    ws.Range("K1").Value = "Percent Change"
+    ws.Range("L1").Value = "Total Stock Volume"
     
     If Header Then
         ws.Range("I1").Value = "Ticker"
